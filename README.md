@@ -1,5 +1,5 @@
 [scalyr-tool](https://github.com/scalyr/scalyr-tool)
-===========
+============
 
 Command-line tool for accessing Scalyr services. The following commands are currently supported:
 
