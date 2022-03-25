@@ -1,6 +1,13 @@
 [scalyr-tool](https://github.com/scalyr/scalyr-tool)
 ============
 
+### Multi-arch support
+
+- amd64
+- arm/v6
+- arm/v7
+- arm64/v8
+
 Command-line tool for accessing Scalyr services. The following commands are currently supported:
 
 - [**query**](https://github.com/scalyr/scalyr-tool#querying-logs): Retrieve log data
