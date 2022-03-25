@@ -65,7 +65,7 @@ jobs:
       - name: Docker login
         run: docker login -u justsky -p ${{ secrets.DOCKER_TOKEN }} 
 
-      - name: Build & push the Docker image
-        run: docker buildx build . --file Dockerfile --tag justsky/scalyr-tool:test
-      - name: Push Docker image
-        run:  docker push justsky/scalyr-tool:test
+      - name: Build the Docker image
+        run: docker buildx build --push --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8  --tag justsky/scalyr-tool:test .
+#      - name: Push Docker image
+#        run:  docker push justsky/scalyr-tool:test
