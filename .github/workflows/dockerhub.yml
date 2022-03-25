@@ -61,10 +61,10 @@ jobs:
 #          tags: ${{ steps.meta.outputs.tags }}
 #          labels: ${{ steps.meta.outputs.labels }}
           
-    - name: Docker login
-      run: docker login -u justsky -p ${{ secrets.DOCKER_TOKEN }} 
+      - name: Docker login
+        run: docker login -u justsky -p ${{ secrets.DOCKER_TOKEN }} 
 
-    - name: Build & push the Docker image
-      run: docker build . --file Dockerfile --tag justsky/${{ github.repository }}:latest
-    - name: Push Docker image
-      run:  docker push justsky/${{ github.repository }}:latest
+      - name: Build & push the Docker image
+        run: docker build . --file Dockerfile --tag justsky/${{ github.repository }}:latest
+      - name: Push Docker image
+        run:  docker push justsky/${{ github.repository }}:latest
