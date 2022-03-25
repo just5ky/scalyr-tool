@@ -1,4 +1,4 @@
-name: Docker multi-arch Build and Push
+name: Docker multi-arch
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -65,6 +65,6 @@ jobs:
         run: docker login -u justsky -p ${{ secrets.DOCKER_TOKEN }} 
 
       - name: Build & push the Docker image
-        run: docker build . --file Dockerfile --tag justsky/${{ github.repository }}:latest
+        run: docker buildx build . --file Dockerfile --tag justsky/scalyr-tool:test
       - name: Push Docker image
-        run:  docker push justsky/${{ github.repository }}:latest
+        run:  docker push justsky/scalyr-tool:test
