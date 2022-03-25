@@ -22,4 +22,8 @@ Image build
 Docker Run
 ===========
 
+Using Dockerhub
 `docker run -h scalyr -i justsky/scalyr-tool --token <API TOKEN> <commands>`
+
+Using Github
+`docker run -h scalyr -i ghcr.io/just5ky/scalyr-tool:main --token <API TOKEN> <commands>`
