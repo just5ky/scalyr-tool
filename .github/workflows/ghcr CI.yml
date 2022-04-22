@@ -1,4 +1,4 @@
-name: Github multi-arch
+name: ghcr CI
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -7,7 +7,7 @@ name: Github multi-arch
 
 on:
   schedule:
-    - cron: '36 15 * * *'
+    - cron: '0 0 * * 1,3,6'
   push:
     branches: [ main ]
     # Publish semver tags as releases.
