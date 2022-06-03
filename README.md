@@ -1,6 +1,7 @@
 [scalyr-tool](https://github.com/scalyr/scalyr-tool)
 ============
 
+![Docker Build](https://github.com/just5ky/scalyr-tool/workflows/Docker/badge.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/justsky/scalyr-tool) ![Docker Size](https://img.shields.io/docker/image-size/justsky/scalyr-tool?color=orange)
 ### Multi-arch support
 
 - amd64
