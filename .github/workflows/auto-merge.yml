@@ -9,6 +9,8 @@ jobs:
   autoapprove:
     name: Auto Approve a PR by dependabot # Name of the job
     runs-on: ubuntu-latest # Environment on which the job runs
+    permissions:
+      pull-requests: write
     steps:
       - name: Auto approve
         uses: hmarr/auto-approve-action@v4 # Custom action for auto approval already available on marketplace
@@ -24,6 +26,8 @@ jobs:
     # Auto merge action can be done only when the PR is approved, hence this automerge needs autoapprove as a prerequisite
     needs: autoapprove
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Auto merge
         # Custom action for auto merging already available on marketplace
